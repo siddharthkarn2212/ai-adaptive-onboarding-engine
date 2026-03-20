@@ -2,122 +2,144 @@
 
 ## 📌 Problem Statement
 
-Traditional onboarding systems use a one-size-fits-all approach, leading to inefficiency:
+Traditional onboarding systems follow a static approach, leading to inefficiency:
 
 * Beginners feel overwhelmed
 * Experienced users waste time
 
-## 💡 Our Solution
-
-We built an **AI-Adaptive Onboarding Engine** that:
-
-* Understands user skills from resume
-* Compares with job requirements
-* Identifies skill gaps
-* Generates a personalized learning roadmap
+There is a need for an **intelligent, adaptive onboarding system**.
 
 ---
 
-## 🔥 Key Features
+## 💡 Our Solution
 
-### 🧠 Intelligent Skill Extraction
+We developed an **AI-Adaptive Onboarding Engine** that:
 
-* Extracts skills from Resume (PDF/TXT)
-* Extracts required skills from Job Description
+* Analyzes user resumes
+* Identifies skill gaps
+* Generates personalized learning paths
+* Provides explainable AI insights
 
-### 📊 Skill Gap Analysis
+---
 
-* Compares user skills vs job requirements
+## 🧠 Key Features
+
+### 🔹 1. Hybrid AI Skill Extraction
+
+* Rule-based extraction for reliability
+* AI-style semantic detection (ML → Machine Learning, etc.)
+* Combines both for higher accuracy
+
+---
+
+### 🔹 2. Skill Gap Analysis
+
+* Compares resume skills vs job requirements
 * Identifies missing skills
 
-### 📚 Adaptive Learning Path
+---
+
+### 🔹 3. Adaptive Learning Path
 
 * Generates step-by-step roadmap
-* Includes prerequisite-based learning (Graph logic)
+* Uses dependency graph (prerequisite-based learning)
 
-### 🧠 Explainable AI (Reasoning Trace)
+---
 
-* Explains What  skill is missing
-* Suggests what to learn first
+### 🔹 4. Explainable AI (XAI)
 
-### 🎯 Experience Level Detection
+* Provides human-like reasoning:
 
-* Beginner / Intermediate / Advanced classification
+  * 🔍 AI Analysis
+  * ⚠️ AI Insight
+  * ✅ AI Observation
+  * 📊 AI Summary
 
-### 🌐 User-Friendly Interface
+---
 
-* Upload resume (PDF/TXT)
-* Paste or auto-generate job role
-* Visual dashboard with results
+### 🔹 5. Dataset-Driven Intelligence
+
+We used a real-world dataset to simulate job roles:
+
+👉 https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset/data
+
+**How we used it:**
+
+* Generated job descriptions from categories
+* Evaluated model performance
+* Calculated match scores
+
+---
+
+### 🔹 6. Resume Upload (PDF + Text)
+
+* Supports PDF and text resumes
+* Automatic text extraction
+
+---
+
+### 🔹 7. Interactive UI Dashboard
+
+* Match score visualization
+* Skill tags (present vs missing)
+* Learning path cards
 
 ---
 
 ## ⚙️ Tech Stack
 
-### Frontend
+### 🔹 Frontend
 
 * React.js
-* HTML/CSS (custom styling)
+* Custom CSS
 
-### Backend
+### 🔹 Backend
 
 * Flask (Python)
 * REST API
 
-### AI Logic
+### 🔹 AI Logic
 
-* Rule-based NLP + reasoning engine
-* Graph-based dependency mapping
+* Hybrid AI (Rule-based + Semantic detection)
+* Graph-based learning path
+* Explainable reasoning engine
 
-### Libraries
+### 🔹 Libraries
 
-* PyPDF2 (PDF parsing)
-* Pandas (dataset processing)
-
----
-
-## 📊 Dataset Used
-
-We used the Kaggle Resume Dataset for validation:
-
-👉 https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset/data
-
-### Dataset Features:
-
-* Resume text data across multiple domains
-* Job categories (Data Science, Web, HR, etc.)
-* Real-world resume structure
-
-### Usage:
-
-* Evaluated model performance
-* Simulated job-role matching
-* Calculated average match score
+* pandas → dataset processing
+* PyPDF2 → PDF parsing
 
 ---
 
-## 🧠 How It Works
+## 🧠 System Architecture
 
 1. Resume Parsing
-2. Skill Extraction
-3. Job Skill Extraction
-4. Skill Gap Identification
+2. Skill Extraction (Hybrid AI)
+3. Job Skill Generation (Dataset-driven)
+4. Skill Gap Analysis
 5. Learning Path Generation
-6. Reasoning Explanation
+6. Explainable AI Output
 
 ---
 
-## 📈 Evaluation
+## 📊 Evaluation
 
-* Tested on real-world dataset
-* Average match score calculated
-* Improved accuracy via skill expansion
+We evaluated our system using a real-world dataset:
+
+* Total Samples: ~900+ resumes
+* Metrics:
+
+  * Average Match Score
+  * Max Score
+  * Min Score
+
+This demonstrates real-world applicability of the system.
 
 ---
 
-## 🚀 Run Locally
+## 🚀 How to Run
 
-### Backend
+### 🔹 Backend
 
 ```bash
 cd backend
@@ -125,7 +147,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### Frontend
+### 🔹 Frontend
 
 ```bash
 cd frontend
@@ -136,13 +158,30 @@ npm start
 ---
 
 
+## 🎯 Future Scope
 
-## 📊 Future Improvements
-
-* Advanced ML/NLP models (BERT, LLM)
-* Real-time recommendation engine
-* Integration with job portals
+* Integration with LLM APIs (OpenAI/Gemini)
+* Real-time job recommendations
+* Advanced NLP models (BERT)
 
 ---
 
+## 🏆 Key Innovation
 
+We designed a **Hybrid AI System** combining:
+
+* Rule-based extraction (precision)
+* Dataset-driven intelligence (real-world grounding)
+* LLM-inspired reasoning (explainability)
+
+---
+
+## 📌 Conclusion
+
+Our system transforms onboarding into an **intelligent, adaptive, and personalized experience**, making it scalable and efficient.
+
+---
+
+## 📄 License
+
+Open-source for educational and hackathon use.

@@ -5,7 +5,33 @@ from ai_engine.reasoning_engine import generate_explanation
 from ai_engine.level_detector import detect_level
 
 
+
+def generate_job_from_resume(resume_text):
+    text = resume_text.lower()
+
+    if "machine learning" in text or "data" in text:
+        return "Looking for Python, Machine Learning, Data Analysis, Deep Learning"
+
+    elif "web" in text or "frontend" in text:
+        return "Looking for HTML, CSS, JavaScript, React"
+
+    elif "java" in text:
+        return "Looking for Java, Spring, SQL"
+
+    elif "management" in text or "communication" in text:
+        return "Looking for Communication, Leadership, Management"
+
+    else:
+        return "Looking for Python, SQL, Communication"
+
+
+
 def analyze(resume_text, job_text):
+    
+    
+    if not job_text or job_text.strip() == "":
+        job_text = generate_job_from_resume(resume_text)
+
     resume_skills = extract_skills(resume_text)
     job_skills = extract_skills(job_text)
 
@@ -22,5 +48,6 @@ def analyze(resume_text, job_text):
         "learning_path": path,
         "match_score": score,
         "explanation": explanation,
-        "level": level
+        "level": level,
+        "generated_job": job_text   
     }
