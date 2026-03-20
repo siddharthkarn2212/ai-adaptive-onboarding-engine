@@ -17,11 +17,10 @@ def analyze_api():
         resume_text = ""
         job = ""
 
-        # ✅ CASE 1: FILE UPLOAD (PDF or TXT)
         if "file" in request.files:
             file = request.files["file"]
 
-            # Debug
+           
             print("File received:", file.filename)
 
             if file.filename.endswith(".pdf"):
@@ -31,13 +30,13 @@ def analyze_api():
 
             job = request.form.get("job", "")
 
-        # ✅ CASE 2: JSON INPUT
+       
         else:
             data = request.get_json()
             resume_text = data.get("resume", "")
             job = data.get("job", "")
 
-        # Debug check
+    
         print("Resume length:", len(resume_text))
         print("Job:", job)
 

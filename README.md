@@ -37,7 +37,7 @@ We built an **AI-Adaptive Onboarding Engine** that:
 
 ### 🧠 Explainable AI (Reasoning Trace)
 
-* Explains WHY a skill is missing
+* Explains What  skill is missing
 * Suggests what to learn first
 
 ### 🎯 Experience Level Detection
@@ -135,11 +135,7 @@ npm start
 
 ---
 
-## 🎥 Demo Video
 
-(Add your demo video link here)
-
----
 
 ## 📊 Future Improvements
 
@@ -149,6 +145,4 @@ npm start
 
 ---
 
-## 👨‍💻 Team
 
-* AI/ML Engineer: Core Logic & System Design

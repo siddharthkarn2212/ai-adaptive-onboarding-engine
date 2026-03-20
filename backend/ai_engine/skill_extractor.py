@@ -1,11 +1,9 @@
-# -------------------------------
-# SKILL DATABASE + ALIAS
-# -------------------------------
+
 skills_db = [
     "python", "sql", "machine learning", "deep learning",
     "aws", "react", "data analysis",
     
-    # 🔥 NEW ADDITIONS
+    
     "html", "css", "javascript",
     "java", "oop", "spring",
     "docker", "ci/cd", "linux",
@@ -20,9 +18,7 @@ skill_alias = {
     "js": "javascript"
 }
 
-# -------------------------------
-# NORMALIZE TEXT
-# -------------------------------
+
 
 def normalize_text(text):
     text = text.lower()
@@ -30,10 +26,6 @@ def normalize_text(text):
         text = text.replace(short, full)
     return text
 
-
-# -------------------------------
-# RULE-BASED EXTRACTION
-# -------------------------------
 
 def extract_skills(text):
     text = normalize_text(text)
@@ -46,10 +38,5 @@ def extract_skills(text):
     return list(set(found))
 
 
-# -------------------------------
-# LLM EXTRACTION (FALLBACK)
-# -------------------------------
-
 def extract_skills_llm(text):
-    # fallback (Gemini optional)
     return extract_skills(text)

@@ -1,10 +1,7 @@
-# -------------------------------
-# SKILL DATABASE + ALIAS
-# -------------------------------
 
 from google import genai
 
-client = genai.Client(api_key="AIzaSyBN519PfgfKk6LooZM0AcKofxOtq2apit0")
+client = genai.Client(api_key="")
 
 
 
@@ -19,9 +16,7 @@ skill_alias = {
     "js": "javascript"
 }
 
-# -------------------------------
-# STEP 1: SKILL EXTRACTION
-# -------------------------------
+
 
 import ast
 
@@ -66,17 +61,13 @@ def extract_skills(text):
     return list(set(found))
 
 
-# -------------------------------
-# STEP 2: SKILL GAP
-# -------------------------------
+
 
 def skill_gap(resume_skills, job_skills):
     return list(set(job_skills) - set(resume_skills))
 
 
-# -------------------------------
-# STEP 3: COURSE MAP
-# -------------------------------
+
 
 course_map = {
     "python": ["Python Basics", "OOP", "Projects"],
@@ -86,9 +77,7 @@ course_map = {
     "react": ["React Basics", "Hooks", "Projects"]
 }
 
-# -------------------------------
-# STEP 4: DEPENDENCIES (SMART LOGIC)
-# -------------------------------
+
 
 dependencies = {
     "deep learning": ["machine learning"],
@@ -123,9 +112,7 @@ def generate_path(gap):
     return path
 
 
-# -------------------------------
-# STEP 5: MATCH SCORE
-# -------------------------------
+
 
 def match_score(resume_skills, job_skills):
     if len(job_skills) == 0:
@@ -133,9 +120,7 @@ def match_score(resume_skills, job_skills):
     return round(len(set(resume_skills) & set(job_skills)) / len(job_skills), 2)
 
 
-# -------------------------------
-# STEP 6: EXPLANATION GENERATOR
-# -------------------------------
+
 
 def generate_explanation(gap):
     explanations = []
@@ -152,16 +137,14 @@ def generate_explanation(gap):
     return explanations
 
 
-# -------------------------------
-# FINAL PIPELINE
-# -------------------------------
+
 
 def analyze(resume_text, job_text):
-    # Rule-based
+   
     resume_skills = extract_skills(resume_text)
     job_skills = extract_skills(job_text)
 
-    # LLM-based (Gemini)
+    
     resume_llm = extract_skills_llm(resume_text)
     job_llm = extract_skills_llm(job_text)
 
@@ -182,9 +165,7 @@ def analyze(resume_text, job_text):
     }
 
 
-# -------------------------------
-# TEST CASE
-# -------------------------------
+
 
 if __name__ == "__main__":
     resume = "I know Python, SQL and ML"
