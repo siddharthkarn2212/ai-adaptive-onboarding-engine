@@ -4,7 +4,7 @@
 
 from google import genai
 
-client = genai.Client(api_key="AIzaSyBN519PfgfKk6LooZM0AcKofxOtq2apit0")
+client = genai.Client(api_key="")
 
 
 
