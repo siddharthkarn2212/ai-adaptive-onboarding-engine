@@ -26,12 +26,12 @@ function App() {
         formData.append("file", selectedFile);
         formData.append("job", finalJob);
 
-        res = await fetch("http://127.0.0.1:5000/analyze", {
+        res = await fetch("https://ai-adaptive-onboarding-engine-nst1.onrender.com/analyze", {
           method: "POST",
           body: formData,
         });
       } else {
-        res = await fetch("http://127.0.0.1:5000/analyze", {
+        res = await fetch("https://ai-adaptive-onboarding-engine-nst1.onrender.com/analyze", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ resume, job: finalJob }),
