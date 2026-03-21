@@ -1,15 +1,6 @@
-# 🚀 AI-Adaptive Onboarding Engine - Backend Dependencies
-
-# Core Backend Framework
 Flask==2.3.2
 flask-cors==4.0.0
-
-# Data Processing
 pandas==2.0.3
-
-# PDF Parsing
 PyPDF2==3.0.1
-
-# Optional (for better performance & future scaling)
 numpy==1.24.3
 
