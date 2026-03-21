@@ -13,4 +13,3 @@ PyPDF2==3.0.1
 # Optional (for better performance & future scaling)
 numpy==1.24.3
 
-All dependencies are version-controlled to ensure reproducibility and consistency across environment.
